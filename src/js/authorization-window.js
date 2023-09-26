@@ -54,12 +54,10 @@ function onAuthFormSubmit(evt) {
   switch (evt.submitter.innerText) {
     case 'SIGN UP':
       evt.target.reset();
-
       firebaseService.createUser(email, password, name);
       break;
     case 'SIGN IN':
       evt.target.reset();
-
       firebaseService.signInUser(email, password, name);
       break;
   }
